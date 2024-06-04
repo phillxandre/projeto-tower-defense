@@ -109,6 +109,10 @@ function love.update(dt)
         tempo_mouse = 0
     end
 
+    if pegouTorre == true and love.mouse.isDown(2) then
+        pegouTorre = false
+    end
+
     for i=#torres, 1, -1 do
         torres[i]:update(dt)
     end
